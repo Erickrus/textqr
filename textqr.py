@@ -17,7 +17,7 @@ class TextQRCode:
 
     self.qr = qrcode.QRCode(
       version=1,
-      box_size=2,
+      box_size=1,
       border=1
     )
 
@@ -70,7 +70,7 @@ class TextQRCode:
     im = self.qr.make_image(fill="black", back_color="white")
     whiteColor = (255, 255, 255)
     blackColor = (0,0,0)
-    im = im.resize((im.size[0]//2, im.size[1]//2), Image.BICUBIC)
+    # im = im.resize((im.size[0]//2, im.size[1]//2), Image.BICUBIC)
     self.draw_im(im)
     del im
 
